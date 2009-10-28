@@ -4,7 +4,7 @@ name = 'example.packagerepo'
 version = 0.1
 
 # get packages from the package name: '1.2.3' -> ['1','1.2','1.2.3']
-packages = [name.rsplit('.')[x] for x in range(len(name.split('.')))],
+packages = [name.rsplit('.',x)[0] for x in reversed(range(len(name.split('.'))))]
 
 setup(name=name,
     version=version,
